@@ -1,0 +1,52 @@
+U.S. states | capital | population
+Arizona | Phoenix, Arizona | 6.731 million people
+California | Sacramento, California | 38.8 million people
+Georgia | Atlanta, Georgia | 10.1 million people
+Indiana | Indianapolis, Indiana | 6.597 million people
+Montana | Helena, Montana | 1.024 million people
+Ohio | Columbus, Ohio | 11.59 million people
+Virginia | Richmond, Virginia | 8.326 million people
+Kansas | Topeka, Kansas | 2.904 million people
+Massachusetts | Boston, Massachusetts | 6.745 million people
+Nebraska | Lincoln, Nebraska | 1.882 million people
+Oklahoma | Oklahoma City, Oklahoma | 3.878 million people
+Alaska | Juneau, Alaska | 736732 people
+South Dakota | Pierre, South Dakota | 853175 people
+Hawaii | Honolulu, Hawaii | 1.42 million people
+Alabama | Montgomery, Alabama | 4.849 million people
+Arkansas | Little Rock, Arkansas | 2.966 million people
+Colorado | Denver, Colorado | 5.356 million people
+Connecticut | Hartford, Connecticut | 3.597 million people
+Delaware | Dover, Delaware | 935614 people
+District of Columbia | Washington, District of Columbia | 658893 people
+Florida | Tallahassee, Florida | 19.89 million people
+Idaho | Boise, Idaho | 1.634 million people
+Illinois | Springfield, Illinois | 12.88 million people
+Iowa | Des Moines, Iowa | 3.107 million people
+Kentucky | Frankfort, Kentucky | 4.413 million people
+Louisiana | Baton Rouge, Louisiana | 4.65 million people
+Maine | Augusta, Maine | 1.33 million people
+Maryland | Annapolis, Maryland | 5.976 million people
+Michigan | Lansing, Michigan | 9.91 million people
+Minnesota | Saint Paul, Minnesota | 5.457 million people
+Mississippi | Jackson, Mississippi | 2.994 million people
+Missouri | Jefferson City, Missouri | 6.064 million people
+Nevada | Carson City, Nevada | 2.839 million people
+New Hampshire | Concord, New Hampshire | 1.327 million people
+New Jersey | Trenton, New Jersey | 8.938 million people
+New Mexico | Santa Fe, New Mexico | 2.086 million people
+New York | Albany, New York | 19.75 million people
+North Carolina | Raleigh, North Carolina | 9.944 million people
+North Dakota | Bismarck, North Dakota | 739482 people
+Oregon | Salem, Oregon | 3.97 million people
+Pennsylvania | Harrisburg, Pennsylvania | 12.79 million people
+Rhode Island | Providence, Rhode Island | 1.055 million people
+South Carolina | Columbia, South Carolina | 4.832 million people
+Tennessee | Nashville, Tennessee | 6.549 million people
+Texas | Austin, Texas | 26.96 million people
+Utah | Salt Lake City, Utah | 2.943 million people
+Vermont | Montpelier, Vermont | 626562 people
+Washington | Olympia, Washington | 7.062 million people
+West Virginia | Charleston, West Virginia | 1.85 million people
+Wisconsin | Madison, Wisconsin | 5.758 million people
+Wyoming | Cheyenne, Wyoming | 584153 people

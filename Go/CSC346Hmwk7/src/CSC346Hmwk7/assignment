@@ -1,0 +1,33 @@
+We didn't do a lot with maps.  At this point in your studies you ought to be able to pick them up on your own.
+They are a useful feature in many modern languages, but Java programmers may not be familiar with them.
+A useful reference to maps is at http://blog.golang.org/go-maps-in-action#TOC_7.
+
+Run a go program that does a query of the first names in the junk/people table.
+I am interested in the distribution of first (or given) names.
+How often does each name happen in the database?  I want to know the frequency of the
+male names, the female names, and all of the names together.  I also want you to print
+a list of all of the names that appear on both the male and female lists.  There should be 4 lists in your output:
+
+    The frequency of all the first names sorted by the frequency from the most frequent to the least frequent.
+    The frequency of the names of females sorted alphabetically by name.
+    The frequency of the names of the males sorted alphabetically by name.
+    A list of the names that appear on both the male and female lists.  For each name indicate the male and female frequency.
+    	Sort the list alphabetically.
+
+The exact design is up to you.  However, you should take into account the number of queries you make to the server.
+Queries to the server are expensive.  Make the calls you need, but take reasonable opportunities to minimize the queries calls.
+
+Teams
+
+There are several design decisions to make in this problem.
+Those types of decisions often benefit from discussing strategy with others.
+You may work on this assignment in groups of two as long as you commit to me that
+you will both put equal effort into the project.  If you do this as a team that fact should
+be documented at the top of your source code, and you should both submit the code
+
+Overachievers
+
+I have been playing with some of the go charting packages,
+such as the one at https://github.com/zieckey/gochart  and https://github.com/vdobler/chart.
+Overachievers should install a charting package and produce some output.
+If you go this way, upload any charts you produce.

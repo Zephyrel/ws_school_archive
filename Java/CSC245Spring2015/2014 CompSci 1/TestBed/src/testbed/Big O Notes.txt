@@ -1,0 +1,16 @@
+CSC285 4/14/16 Notes
+
+Big O Notation
+
+Big O notation tells us how a function will scale(runtime)
+	As we offer larger and larger databases to an algorithm, how does it scale timewise?
+		
+int a[30], b[30], count=0;
+for(int i=0;i<=29;i++){
+	for(int j=0;j<=29;j++{
+		if(a[i]==b[j])count++;
+	}
+}
+Big O for this would be O(n^2)
+Loops sre multiplicative and on the order of n
+Statements such as if's, increments, and assignments are constant

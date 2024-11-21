@@ -1,0 +1,2 @@
+The result of Expression 1 is:	4084.6
+The result of Expression 2 is:	164.0

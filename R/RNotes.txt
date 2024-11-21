@@ -1,0 +1,25 @@
+T distribution
+
+Z-Distribution
+
+Binomial Distribution
+
+Chi Squared Test and Distribution
+
+
+
+F Distribution
+F = MS{T}/MS{R}
+E(MS{T}) = δ + E(of i) n{i}(µ^2)
+
+t = µ{i} - µ{j}/(sqrt^(ô^2(1/n{i}+1/n{j}))
+Bonferroni Method
+()
+
+
+Bon Feroni approach
+The probability of a Type I error is the significance level a. But if multiple tests e.g., m comparisons) are to be made the probability of at least one Type I error increases to a probability of 1.0-(1-a)^m.
+ex. if 3 comparisons are made each with a = .05 thn the probability of at least one Type 1 error
+is equal to 1.0-(0.95)^3 ~= 0.143
+
+To avoid this higher probability, we may choose to use an adjusted significance level of a/m for each test, where m is the total number of comparisons made

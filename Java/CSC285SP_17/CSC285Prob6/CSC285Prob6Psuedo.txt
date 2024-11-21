@@ -1,0 +1,47 @@
+public class CSC285Prob6 {
+	public static void main(String[] args){
+		//make the integer and double arrays for later, sort them ascending
+		//then make integer and double arrays of targets, to be used by for loops to run targets through methods
+		
+		//using the above planned method, array of ints to run through factorial, run targets with for loop, print
+		//same, array of targets to run through fibonacci, run targets with for loop, print
+		
+		//use for loop method to run targets through binary search and print target, index found of target by binarySearch
+		//Done
+		}
+	}
+	
+	public static int NFactorial(int n){ if n= 0 or 1, return 1, else return n*nfact(n-1) }
+	
+	public static int Fib(int n){ if n=0 return 0, n =1 return 1, else return fib(n-1)+fib(n-2)}
+	
+	//a is array being fed, x is target
+	public static int binarySearch(double[] a, double x){ 
+		return binarySearch(a, x, 0, a.length - 1); //helper
+	}
+	
+	//helper
+	private static int binarySearch(double[] a, double x, int lo, int hi){
+		if(lo > hi){ return -1; }
+		int mid = (lo + hi)/2;
+		if(a[mid] == x){ return mid; }
+		//a[mid] > x if sorted ascending, < if descending
+		else if(a[mid] > x){ return binarySearch(a, x, mid+1, hi);}
+		else{ return binarySearch(a, x, lo, mid-1); }
+	}
+
+	//copypaste for running ints, just change datatype of a[], x
+	
+	//bubble sort
+	public static void bubbleSort(int[] t){
+		for(int i=0;i<t.length-1;i++){
+			for(int j=1;j<t.length-i;j++){
+				if(t[j-1]<t[j]){
+					int tmp=t[j-1];
+					t[j-1]=t[j];
+					t[j]=tmp;
+				}
+			}
+		}
+	}
+}

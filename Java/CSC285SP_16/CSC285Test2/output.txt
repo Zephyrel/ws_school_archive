@@ -1,0 +1,6 @@
+Note, A represents the rocket in the equation, lowercase letters represent corrections.
+
+= Results =
+=================================================================
+Rocket		Expression	Force		Angle
+0		a+(d%(c+A*b))	43000	2.800000

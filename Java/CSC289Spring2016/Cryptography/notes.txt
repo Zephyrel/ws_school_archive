@@ -1,0 +1,199 @@
+(Euclid’s Division Theorem)
+Let n be a positive integer. Then for every integer m,
+there exist unique integers q and r such that
+m = nq + r and 0  r < n.
+
+Modular Arithmetic
+Definition (1st version);
+Let m, n be positive integers. Then m mod n is the
+remainder left when dividing m by n.
+Ex: 25 mod 4 = 1; 25 mod 5 = 0; 27 mod 5 = 2.
+We would like to extend this definition to negative m as well.
+Definition (2nd version);
+For an integer m and positive integer n,
+m mod n is the smallest nonnegative integer r such that,
+for some integer q, m = nq + r.
+Ex: 25 mod 4 = 1; −25 mod 4 = 3.
+
+Note: In general, except if [m mod n] = 0,
+[(−m) mod n] = n − [m mod n] so
+[(−m) mod n] != [m mod n] unless
+[m mod n] = n/2.
+
+Lemma 2.2
+i mod n = (i + kn) mod n for all integers k.
+
+Lemma 2.3
+(i + j) mod n = (i + (j mod n)) mod n
+= ((i mod n) + j) mod n
+= ((i mod n) + (j mod n)) mod n,
+(i · j) mod n = (i · (j mod n)) mod n
+= ((i mod n) · j) mod n
+= ((i mod n) · (j mod n)) mod n.
+
+If x 2 Zn, then x is a variable with possible
+integral values between 0 and n − 1.
+• If x, y 2 Zn, we use x+n y and x·n y to perform
+algebraic operations on x, y.
+• Additive identity property: 0 +n i = i.
+Multiplicative identity property: 1 ·n i = i.
+• a −n b denotes a +n (−b).
+
+Theorem 2.4
+Addition and multiplication modn satisfy the
+commutative, associative and distributive laws.
+a +n (b +n c) = (a + (b +n c)) mod n
+i+n j = (i+j) mod n and i ·n j = (i · j) mod n.
+= (a + ((b + c) mod n)) mod n
+= (a + (b + c)) mod n
+= ((a + b) + c) mod n
+= ((a + b) mod n + c) mod n
+= ((a +n b) + c) mod n
+= (a +n b) +n c
+
+Private key is some a, n.
+Encrypt: fa,n(M) = a ·M mod n = a ·n M
+Decrypt: “Divide” f(M) by a mod n.
+• In order for this to work division must exist and
+define an inverse to multiplication., i.e.
+ga,n(fa,n(M)) = M where ga,n(X) = a−1 ·n X
+Does division exist?
+
+When does fa,n(x) = a ·n x have an inverse?
+fa,n(x) = a ·n x has an inverse if and only if
+a and n are relatively prime, i.e., they have no
+common factors greater than 1.
+
+END OF INTROCRRYPTOMOD
+BEGIN INVERSEGCD
+
+Positive integer m is a divisor of integer n
+if n = mq for some integer q
+• if m is a divisor of n we write m|n.
+(say) “m divides n”
+• if m is a not a divisor of n we write m 6 |n.
+(say) “m does not divide n”
+
+If p is a divisor of both m and n then
+p is a common divisor of m and n
+• gcd(m, n) denotes the greatest common divisor of m and n.
+1 is aways a common divisor of m and n
+
+Euclid’s Division Theorem
+Theorem 2.12 (Euclid’s Division Theorem, Restricted
+Version): Let n be a positive integer. Then
+for every nonnegative integer m, there exist unique integers
+q, r such that m = nq + r and 0  r < n.
+Note 1: By definition, r = m mod n.
+Note 2: This is restricted because we assume that
+m is nonnegative. Book problem shows how to
+extend this to negative m as well.
+
+Before returning to multiplicative inverses, we first
+see how to calculate gcd(j, k)
+Suppose k = jq + r. Is there a relationship between
+gcd(j, k) and gcd(r, j)?
+Lemma 2.13 If j, k, q, and r are nonnegative integers
+such that k = jq + r, then gcd(j, k) = gcd(r, j).
+1)GCD(j, k) where 0  j < k
+2)If j = 0 answer is k
+3)Else
+4)Write k = jq + r where r = k mod j
+5)Answer is GCD(r, j)
+
+Note that r is nonegative, and every time line 4 is executed,
+r < j, so the value of r decreases. Therefore, in a finite
+number of steps, process reaches j = 0 and terminates
+
+Lemma 2.11: Given a and n, if there exist integers
+x and y such that ax + ny = 1, then gcd(a, n) = 1
+— that is, a and n are relatively prime.
+
+Extended GCD Algorithm
+Returns not only GCD of j, k with j < k but also
+x, y such that gcd(j, k) = jx + ky.
+(i) Base case: k = jq:
+gcd(j, k) = j with x = 1, y = 0.
+(ii) Nonbase case: k 6= jq so k = jq + r with 0 < r < j
+Recursively compute gcd(r, j)
+and x0, y0 s.t. gcd(r, j) = rx0 + jy0.
+Because r = k − jq,
+gcd(r, j) = (k − jq)x0 + jy0 = kx0 + j(y0 − qx0)
+so gcd(j, k) = gcd(r, j) = jx + ky
+where y = x0 and x = y0 − qx0.
+
+Euclid’s extended GCD algorithm then gives
+Theorem 2.14: Given two integers j, k, Euclid’s extended
+GCD algorithm computes gcd(j, k) and two
+integers x, y such that gcd(j, k) = jx + ky.
+We can now extend Lemma 2.11 to
+Theorem 2.15: Two positive integers j, k have
+gcd(j, k) = 1 (and thus are relatively prime) if and
+only if there are integers x, y such that jx + ky = 1.
+Proof: “if” comes from Lemma 2.11
+“only if” comes from Theorem 2.14
+
+Recall
+Lemma 2.8 The equation a ·n x = 1 has a solution in
+Zn iff there exist integers x, y such that ax + ny = 1.
+Combining this and Theorem 2.15 gives
+Corollary 2.16: For any positive integer n, a 2 Zn
+has a multiplicative inverse iff gcd(a, n) = 1.
+Using the fact that if n is prime, gcd(a, n) = 1 for all
+nonzero a 2 Zn, we obtain
+Corollary 2.17: For any prime p, every nonzero
+a 2 Zp has a mutiplicative inverse.
+
+Computing Inverses
+Corollary 2.18: If an element a 2 Zn has an inverse,
+we can compute it by running Euclid’s extended GCD
+algorithm to determine integers x, y so that ax+ny = 1.
+The inverse of a 2 Zn is x mod n.
+Example: Given a = 27, n = 58 we can use the
+Extended GCD algorithm to find that
+27(−15) + 58(7) = 1.
+Thus the multiplicative inverse of 27 in Z58 is
+−15 mod 58 = 43.
+Reality check: 27 · 43 = 1161 = 20 · 58 + 1
+
+ENDOF INVERSEGCD
+
+Definition:
+Zn is the set of integers {0, 1, . . . , n − 1} with
+addition modn i +n j = (i + j) mod n and
+multiplication modn i ·n j = (i · j) mod n
+
+Lemma 2.20 Let p be a prime number. For any nonzero
+number a 2 Zp, the function fa(x) = x ·p a is 1-to-1. In
+particular, the numbers, 1 ·p a, 2 ·p a, . . . , (p − 1) ·p a ,
+are a permutation of the set {1, 2, . . . , p − 1}.
+
+For public-key cryptography,
+the public encoding function, PB, needs to be one-way.
+The secret decoding function, SB, is actually
+an efficient way of calculating the inverse of PB.
+This efficient way is only available to the
+“owner” who constructed PB.
+
+Exponentiation in Zn is the main idea behind RSA encryption:
+By Lemma 2.3, if a 2 Zn, then
+aj mod n = |a ·n a ·n{z· · · ·n a} .
+j factors
+aj mod n is the product in Zn of j factors, each equal to a.
+
+Lemma 2.19:
+For any a 2 Zn and any nonnegative integers i, j,
+(ai mod n) ·n (aj mod n) = ai+j mod n
+(ai mod n)j mod n = aij mod n
+
+Bob’s RSA Key Choice Algorithm
+(1) Choose 2 large prime numbers p and q	> 150 digits
+(2) Set n = pq and T = (p − 1)(q − 1)
+(3) Choose e 6= 1 so that gcd(e, T) = 1
+(4) Calculate d = e−1 mod T
+(5) Publish e, n as public key
+(6) Keep d as secret key
+
+Any prime that
+doesn’t divide T
+Extended GCD Alg

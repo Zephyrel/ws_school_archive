@@ -1,0 +1,34 @@
+Lets write a trivial little program in Java to learn some things about networking.
+
+Specifically I'd like to know the IP address given a DNS name, the port of that website, the local IP address of the user computer, and the port of the local computer.
+
+Brief sketch of what we need to do:
+
+Import two packages that will provide code we need for hosts and ports. Those are java.io.* and java.net.*.
+
+ We need to open a socket, which is simply a connection point for the remote computer. We might name it, eh, mySocket), and a _sketch_ of the code might be something like
+
+...Socket mySocket.....new...host...DNS name...port...
+
+and we'll use REDACTED and port 80.
+
+The methods that are provided by the two imported package that we will need will be...........?
+
+That correctly written code should return something like:
+
+Connection to: REDACTED/XX.XXX.X.XXX
+Port Number: 80
+
+You'll need to put the text into a println statement, of course.
+
+Then for the localhost something similar.  Sample output:
+
+Local Address: /XX.XX.XX.XXX
+Local Port: XXXXX
+
+We shold also implement some error handling, a try-catch block would be nice, since I will modify your source code to try obviously bad websites.
+The handle the cases where there is an unknown host, a bad socket, or an I/O exception.
+
+At the top of the output give me your info: Name, Class, and Network Programming Assignment #1.
+
+The assignment will not be due until 26 September, so we can discuss it in class before then. 

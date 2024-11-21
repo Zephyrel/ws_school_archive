@@ -1,0 +1,47 @@
+-----------------------------------------------------------------
+Student ID	Student Name 	Test 1	Test 2	Test 3 	Test Avg.
+-----------------------------------------------------------------
+45A3 		Jones, H A   	86 	88 	95 	 89.667 B
+34K5 		Horner, M   	67 	75 	23 	 55.000 F
+56J8 		Gach, T A   	75 	85 	90 	 83.333 B
+34U8 		Hunter C   	100 	50 	75 	 75.000 C
+42P4 		Hinrichs S   	85 	75 	65 	 75.000 C
+78T6 		Johnson K   	80 	78 	89 	 82.333 B
+44L2 		Levitte H   	56 	66 	99 	 73.667 C
+88I9 		Garner J   	95 	92 	98 	 95.000 A
+
+Student with Student ID 42P4 has been deleted off the records.
+
+Student with Student ID 45A3 has been deleted off the records.
+
+-----------------------------------------------------------------
+Student ID	Student Name 	Test 1	Test 2	Test 3 	Test Avg.
+-----------------------------------------------------------------
+34K5 		Horner, M   	67 	75 	23 	 55.000 F
+56J8 		Gach, T A   	75 	85 	90 	 83.333 B
+34U8 		Hunter C   	100 	50 	75 	 75.000 C
+78T6 		Johnson K   	80 	78 	89 	 82.333 B
+44L2 		Levitte H   	56 	66 	99 	 73.667 C
+88I9 		Garner J   	95 	92 	98 	 95.000 A
+
+Student with the following information has been added: 
+67T4 		Clouse B     	80 	75 	98 	 84.333 B
+
+Student with the following information has been added: 
+45P5 		Garrison J   	75 	78 	72 	 75.000 C
+
+Student with the following information has been added: 
+89P0 		Singer A     	85 	95 	99 	 93.000 A
+
+-----------------------------------------------------------------
+Student ID	Student Name 	Test 1	Test 2	Test 3 	Test Avg.
+-----------------------------------------------------------------
+88I9 		Garner J   	95 	92 	98 	 95.000 A
+89P0 		Singer A     	85 	95 	99 	 93.000 A
+67T4 		Clouse B     	80 	75 	98 	 84.333 B
+56J8 		Gach, T A   	75 	85 	90 	 83.333 B
+78T6 		Johnson K   	80 	78 	89 	 82.333 B
+34U8 		Hunter C   	100 	50 	75 	 75.000 C
+45P5 		Garrison J   	75 	78 	72 	 75.000 C
+44L2 		Levitte H   	56 	66 	99 	 73.667 C
+34K5 		Horner, M   	67 	75 	23 	 55.000 F

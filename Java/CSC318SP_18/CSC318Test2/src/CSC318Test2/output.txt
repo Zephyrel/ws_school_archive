@@ -1,0 +1,9 @@
+
+Hour: 1000
+
+Final stats over Sim Time of 3600000 seconds;
+**********Statistics for 1000 Traffic Sim Hours**********
+EW Avg Cars Waiting:	0.00000000 per Light Cycle	Over 12000 count of data points.
+NS Avg Cars Waiting:	2.00420345 per Light Cycle	Over 4758 count of data points.
+EW Avg Time Waiting:	101.26896975 secs		Over 335666 count of data points.
+NS Avg Time Waiting:	108.05983743 secs		Over 87838 count of data points.

@@ -1,0 +1,22 @@
+Events on the population
+1.) Bacteria kill
+2.) Age and kill
+3.) Spawn
+4.) Weahter kill
+5.) Age
+6.) Fishing
+7.)
+
+For years 1 to 25
+1.) For this year calculate the weather 
+2.) Bacteria kill
+3.) Spawn
+4.) Fish 3 and 4 year olds
+5.) Age. Kill
+
+_		25
+x	=	Sig(___Xi___)
+		n=1	 ( 25 )
+
+		   _
+delta^2 = (x^2) - (	x 

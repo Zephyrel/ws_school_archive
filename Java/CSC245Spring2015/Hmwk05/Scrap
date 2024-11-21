@@ -1,0 +1,97 @@
+public int compareTo(Pizza){
+		int comparison = 0;
+		//pizzaOne > pizzaTwo, comparison = 1
+		//pizzaOne < pizzaTwo, comparison = -1
+		//pizzaOne = pizzaTwo, comparison = 0
+		//Order of priority comparison: Size, Crust, Toppings
+		//Continue going to next over priority if comparison = 0 upon comparison for current priority
+		
+		if(pizzaOne.getInches() > pizzaTwo.getInches()){
+			comparison = 1;
+		}else if(pizzaOne.getInches() < pizzaTwo.getInches()){
+			comparison = -1;
+		}else if(pizzaOne.getInches() == pizzaTwo.getInches()){
+			comparison = 0;
+		}
+		
+		if(comparison == 0){
+			if(pizzaOne.getCrust() == true && pizzaTwo.getCrust() == false){
+				comparison = 1;
+			}else if(pizzaOne.getCrust() == false && pizzaTwo.getCrust() == true){
+				comparison = -1;
+			}else if(pizzaOne.getCrust() && pizzaTwo.getCrust() == true || false){
+				comparison = 0;
+			}
+		}
+		
+		while(comparison == 0){
+			if(pizzaOne.getToppings().length() > pizzaTwo.getToppings().length()){
+				comparison = 1;
+			}else if(pizzaOne.getToppings().length() < pizzaTwo.getToppings().length()){
+				comparison = -1;
+			}else if(pizzaOne.getToppings().length() == pizzaTwo.getToppings().length()){
+				//There shouldn't be any ties whatsoever!
+				int i=0;
+				while((i < pizzaOne.getToppings().length()) &&  (i < pizzaTwo.getToppings().length())){
+					//There is no word count function for string, so this'll have to do
+					//I don't wanta extend the String object, ech
+					if(Character.compare(pizzaOne.getToppings().charAt(i), pizzaTwo.getToppings().charAt(i)) > 0){
+						comparison = 1;
+					}else if(Character.compare(pizzaOne.getToppings().charAt(i), pizzaTwo.getToppings().charAt(i)) < 0){
+						comparison = -1;
+					}else if(Character.compare(pizzaOne.getToppings().charAt(i), pizzaTwo.getToppings().charAt(i)) == 0){
+						comparison = 0;
+						i++;
+					}
+				}
+			}
+		}
+		
+		return comparison;
+	}
+	
+	
+	
+
+		try{
+			Scanner inputFile = new Scanner(new File("Tab Delimited.txt"));
+			int i = 1;
+			while(inputFile.hasNext() && (i < 20)){
+				pizzaArray[i].setAll(inputFile.nextInt(), inputFile.next(), inputFile.nextln());
+				i+=1;
+			}
+			inputFile.close();
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+		
+		//Number one should be the top most, meaning it has the least height, Thin Crust, and the Least toppings.
+		//Store the pizza being compared to Number One in a temporary
+		//If the pizza being compared to Number One is found to be less than
+		//Bump everything in the array up one
+		for(int i=0; i<20; i++){
+			Pizza pizzaOne = pizzaArray[1];
+			Pizza pizzaMain = pizzaArray[i];
+			Pizza pizzaTemp = new Pizza();
+			
+			if(Pizza.compareTo(pizzaArray[i], pizzaArray[1]) == 1){
+				//the compared pizza is greater than the first pizza, do not shift
+				i++;
+				
+			}else if(Pizza.compareTo(pizzaArray[i], pizzaArray[1]) == -1){
+				//the compared pizza is less than the first pizza, shift
+				//Put pizzaArray[j=0] into a temporary pizza
+				//set pizzaArray[j=0] as pizzaMain[i]
+				//increment[j]
+				//set pizzaTemp as pizzaArray[j]
+				//
+				for(j=1; j<i; j++){
+					pizzaTemp = pizzaArray[j]
+				}
+				i++;
+			}else if(Pizza.compareTo(pizzaArray[i], pizzaArray[1]) == 0){
+				//the compared pizza is equal to the first pizza, shift
+				
+				i++;
+			}
+			

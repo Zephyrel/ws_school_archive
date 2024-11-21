@@ -1,0 +1,254 @@
+
+Quarter 1:
+
+For week:	1	Demand:	 60	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 50	Order Recieved Today: 50
+For week:	2	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	3	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	4	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	5	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	6	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	7	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	8	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	9	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	10	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	11	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	12	Demand:	 80	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	13	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+
+Quarter 2:
+
+For week:	14	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 60	Order Recieved Today: 45
+For week:	15	Demand:	 40	Bought:	 55	Sold:	40
+Profit:		15.00	Ordered: 60	Order Recieved Today: 55
+For week:	16	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	17	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	18	Demand:	 50	Bought:	 55	Sold:	50
+Profit:		115.00	Ordered: 60	Order Recieved Today: 55
+For week:	19	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	20	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	21	Demand:	 50	Bought:	 55	Sold:	50
+Profit:		115.00	Ordered: 60	Order Recieved Today: 55
+For week:	22	Demand:	 70	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	23	Demand:	 80	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	24	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	25	Demand:	 80	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	26	Demand:	 50	Bought:	 55	Sold:	50
+Profit:		115.00	Ordered: 60	Order Recieved Today: 55
+
+Quarter 3:
+
+For week:	27	Demand:	 70	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	28	Demand:	 40	Bought:	 55	Sold:	40
+Profit:		15.00	Ordered: 60	Order Recieved Today: 55
+For week:	29	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	30	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	31	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	32	Demand:	 40	Bought:	 55	Sold:	40
+Profit:		15.00	Ordered: 60	Order Recieved Today: 55
+For week:	33	Demand:	 70	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	34	Demand:	 70	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	35	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	36	Demand:	 80	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	37	Demand:	 70	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	38	Demand:	 80	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	39	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+
+Quarter 4:
+
+For week:	40	Demand:	 40	Bought:	 55	Sold:	40
+Profit:		15.00	Ordered: 50	Order Recieved Today: 55
+For week:	41	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	42	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	43	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	44	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	45	Demand:	 70	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	46	Demand:	 80	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	47	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	48	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	49	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	50	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	51	Demand:	 70	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	52	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+
+Final week stats:
+For week:	52	Demand:	 40	Sold:	40
+Profit:		85.00	Ordered: 50
+**********Statistics for 52 weeks of Sales**********
+Total Profit over period: 6515.00	Average profit:	125.28846153846153
+Variance:	785161.7989374715	Std. Dev:	886.0935610518064
+Count:	52
+
+Reset simulation, moving to the next ordering procedure.
+
+
+Next Ordering Policy: My Ordering Policy with a Random Number Generator
+
+
+Quarter 1:
+
+For week:	1	Demand:	 60	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	2	Demand:	 40	Bought:	 50	Sold:	40
+Profit:		50.00	Ordered: 55	Order Recieved Today: 50
+For week:	3	Demand:	 70	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	4	Demand:	 70	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	5	Demand:	 60	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	6	Demand:	 60	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	7	Demand:	 40	Bought:	 50	Sold:	40
+Profit:		50.00	Ordered: 55	Order Recieved Today: 50
+For week:	8	Demand:	 80	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	9	Demand:	 50	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	10	Demand:	 60	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	11	Demand:	 70	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	12	Demand:	 60	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 55	Order Recieved Today: 50
+For week:	13	Demand:	 40	Bought:	 50	Sold:	40
+Profit:		50.00	Ordered: 55	Order Recieved Today: 50
+
+Quarter 2:
+
+For week:	14	Demand:	 50	Bought:	 50	Sold:	50
+Profit:		150.00	Ordered: 60	Order Recieved Today: 50
+For week:	15	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	16	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	17	Demand:	 50	Bought:	 55	Sold:	50
+Profit:		115.00	Ordered: 60	Order Recieved Today: 55
+For week:	18	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	19	Demand:	 50	Bought:	 55	Sold:	50
+Profit:		115.00	Ordered: 60	Order Recieved Today: 55
+For week:	20	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	21	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	22	Demand:	 70	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	23	Demand:	 50	Bought:	 55	Sold:	50
+Profit:		115.00	Ordered: 60	Order Recieved Today: 55
+For week:	24	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+For week:	25	Demand:	 50	Bought:	 55	Sold:	50
+Profit:		115.00	Ordered: 60	Order Recieved Today: 55
+For week:	26	Demand:	 80	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 60	Order Recieved Today: 55
+
+Quarter 3:
+
+For week:	27	Demand:	 60	Bought:	 55	Sold:	55
+Profit:		165.00	Ordered: 70	Order Recieved Today: 55
+For week:	28	Demand:	 70	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+For week:	29	Demand:	 60	Bought:	 65	Sold:	60
+Profit:		145.00	Ordered: 70	Order Recieved Today: 65
+For week:	30	Demand:	 60	Bought:	 65	Sold:	60
+Profit:		145.00	Ordered: 70	Order Recieved Today: 65
+For week:	31	Demand:	 70	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+For week:	32	Demand:	 70	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+For week:	33	Demand:	 50	Bought:	 65	Sold:	50
+Profit:		45.00	Ordered: 70	Order Recieved Today: 65
+For week:	34	Demand:	 70	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+For week:	35	Demand:	 60	Bought:	 65	Sold:	60
+Profit:		145.00	Ordered: 70	Order Recieved Today: 65
+For week:	36	Demand:	 70	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+For week:	37	Demand:	 70	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+For week:	38	Demand:	 70	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+For week:	39	Demand:	 80	Bought:	 65	Sold:	65
+Profit:		195.00	Ordered: 70	Order Recieved Today: 65
+
+Quarter 4:
+
+For week:	40	Demand:	 40	Bought:	 65	Sold:	40
+Profit:		-55.00	Ordered: 50	Order Recieved Today: 65
+For week:	41	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	42	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	43	Demand:	 80	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	44	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+For week:	45	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	46	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	47	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	48	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	49	Demand:	 50	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	50	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	51	Demand:	 60	Bought:	 45	Sold:	45
+Profit:		135.00	Ordered: 50	Order Recieved Today: 45
+For week:	52	Demand:	 40	Bought:	 45	Sold:	40
+Profit:		85.00	Ordered: 50	Order Recieved Today: 45
+
+Final week stats:
+For week:	52	Demand:	 40	Sold:	40
+Profit:		85.00	Ordered: 50
+**********Statistics for 52 weeks of Sales**********
+Total Profit over period: 7200.00	Average profit:	138.46153846153845
+Variance:	958948.5662266728	Std. Dev:	979.2591925668469
+Count:	52

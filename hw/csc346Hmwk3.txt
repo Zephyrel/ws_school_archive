@@ -1,0 +1,23 @@
+MariaDB [rferguson]> DESCRIBE classics;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| author   | varchar(128) | YES  | MUL | NULL    |       |
+| title    | varchar(128) | YES  |     | NULL    |       |
+| category | varchar(16)  | YES  |     | NULL    |       |
+| year     | smallint(6)  | YES  |     | NULL    |       |
+| isbn     | char(13)     | NO   | PRI |         |       |
++----------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+MariaDB [rferguson]> SELECT * FROM classics;
++---------------------------------------+------------------------------+-------------+------+---------------+
+| author                                | title                        | category    | year | isbn          |
++---------------------------------------+------------------------------+-------------+------+---------------+
+| Mark Twain (Samuel Langhorne Clemens) | The Adventures of Tom Sawyer | Fiction     | 1876 | 9781598184891 |
+| Jane Austen                           | Pride and Prejudice          | Fiction     | 1811 | 9780582506206 |
+| Charles Darwin                        | The Origin of Species        | Non-Fiction | 1856 | 9780517123301 |
+| Charles Dickens                       | The Old Curiosity Shop       | Fiction     | 1841 | 9780099533474 |
+| William Shakespeare                   | Romeo and Juliet             | Play        | 1594 | 9780192814968 |
++---------------------------------------+------------------------------+-------------+------+---------------+
+5 rows in set (0.00 sec)

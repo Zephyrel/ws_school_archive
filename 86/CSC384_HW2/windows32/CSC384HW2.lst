@@ -1,0 +1,274 @@
+Microsoft (R) Macro Assembler Version 14.10.25019.0	    09/30/17 18:22:22
+CSC384HW2.asm						     Page 1 - 1
+
+
+				; Title			CSC384 Assignment 2
+				; Author:		Russell Ferguson Jr
+				; Instructor:	Baoqiang Yan
+				; Date:			9/27/2017
+
+				.586
+				.MODEL FLAT
+				INCLUDE io.h
+			      C ; IO.H -- header file for I/O macros (listing suppressed)
+			      C .NOLIST      ; turn off listing
+			      C .LIST        ; begin listing
+			      C 
+
+				.STACK 4096
+
+ 00000000			.DATA
+ 00000000 00000000		long        DWORD ?
+ 00000004 00000000		wide        DWORD ?
+ 00000008 50 6C 65 61 73	promptA BYTE    "Please input an integer value for A:", 0
+	   65 20 69 6E 70
+	   75 74 20 61 6E
+	   20 69 6E 74 65
+	   67 65 72 20 76
+	   61 6C 75 65 20
+	   66 6F 72 20 41
+	   3A 00
+ 0000002D 50 6C 65 61 73	promptB BYTE    "Please input an integer value for B:", 0
+	   65 20 69 6E 70
+	   75 74 20 61 6E
+	   20 69 6E 74 65
+	   67 65 72 20 76
+	   61 6C 75 65 20
+	   66 6F 72 20 42
+	   3A 00
+ 00000052 50 6C 65 61 73	promptC BYTE    "Please input an integer value for C:", 0
+	   65 20 69 6E 70
+	   75 74 20 61 6E
+	   20 69 6E 74 65
+	   67 65 72 20 76
+	   61 6C 75 65 20
+	   66 6F 72 20 43
+	   3A 00
+ 00000077 00000000		varA       DWORD	?
+ 0000007B 00000000		varB       DWORD	?
+ 0000007F 00000000		varC       DWORD	?
+
+ 00000083 50 6C 65 61 73	promptG1	BYTE    "Please input grade1:", 0
+	   65 20 69 6E 70
+	   75 74 20 67 72
+	   61 64 65 31 3A
+	   00
+ 00000098 50 6C 65 61 73	promptG2	BYTE    "Please input grade2:", 0
+	   65 20 69 6E 70
+	   75 74 20 67 72
+	   61 64 65 32 3A
+	   00
+ 000000AD 50 6C 65 61 73	promptG3	BYTE    "Please input grade3:", 0
+	   65 20 69 6E 70
+	   75 74 20 67 72
+	   61 64 65 33 3A
+	   00
+ 000000C2 50 6C 65 61 73	promptG4	BYTE    "Please input grade4:", 0
+	   65 20 69 6E 70
+	   75 74 20 67 72
+	   61 64 65 34 3A
+	   00
+ 000000D7 00000000		grade1			DWORD ?
+ 000000DB 00000000		grade2			DWORD ?
+ 000000DF 00000000		grade3			DWORD ?
+ 000000E3 00000000		grade4			DWORD ?
+ 000000E7 00000000		gradeSum		DWORD ?
+
+ 000000EB  0000001E [		string			BYTE	30 DUP(?)
+	    00
+	   ]
+ 00000109 54 68 65 20 72	resultLbl		BYTE	"The result is", 0
+	   65 73 75 6C 74
+	   20 69 73 00
+ 00000117  0000000B [		result1			BYTE	11 DUP(? ), 0
+	    00
+	   ] 00
+ 00000123 52 65 73 75 6C	gradeLbl		BYTE	"Results", 0
+	   74 73 00
+ 0000012B 47 72 61 64 65	gradeSumPrompt	BYTE	"Grade Sum: "			; Not null terminated, loading this string will load data after it until null
+	   20 53 75 6D 3A
+	   20
+ 00000136  0000000B [		sumascii		BYTE	11 DUP(? ), 0dh, 0ah	; This has a CR and LF appended to the end for a newline!
+	    00
+	   ] 0D 0A
+ 00000143 47 72 61 64 65	gradeAvgPrompt	BYTE	"Grade Average: "
+	   20 41 76 65 72
+	   61 67 65 3A 20
+ 00000152  0000000B [		avgascii		BYTE	11 DUP(? ), 0			; This is null terminated! End of Feed!
+	    00
+	   ] 00
+
+ 00000000			.CODE
+
+ 00000000			_MainProc PROC
+					; part 1, calculate this
+					; (a + b * c) / (2 * b)
+					; (12 + 2 * 8) / (2 * 2) = (28 / 4)
+					input   promptA, string, 30		; get A
+					atod    string					; convert to integer
+ 0000002D  A3 00000077 R		mov     varA, eax				; store eax value into memory into varA
+
+					input   promptB, string, 30		; get B
+					atod    string					; convert to integer
+ 0000005F  A3 0000007B R		mov     varB, eax				; store eax value into memory into varB
+
+					input   promptC, string, 30		; get C
+					atod    string					; convert to integer
+ 00000091  A3 0000007F R		mov     varC, eax				; store eax value into memory into varB
+
+					; Math time. Calculate 2*b, then b*c, then a + (b*c), then (a+b*c)/(2*b)
+					
+					; First part of the equation, the dividend
+ 00000096  A1 0000007B R		mov		eax,	varB			; store B into eax
+ 0000009B  0F AF 05			imul	eax,	varC			; signed multiply eax, which has B in it, by C
+	   0000007F R
+ 000000A2  03 05 00000077 R		add		eax,	varA			; add A to eax
+ 000000A8  A3 00000000 R		mov		long,	eax				; store number in eax, to variable "long"
+
+					; Now the divisor
+ 000000AD  A1 0000007B R		mov		eax,	varB			; Second half of the division
+ 000000B2  6B C0 02			imul	eax,	2				; signed multiply by 2.
+ 000000B5  A3 00000004 R		mov		wide,	eax				; store number in eax, to variable "long"
+
+					; Setup for division, then divide
+ 000000BA  A1 00000000 R		mov		eax,	long			; Move long into eax
+ 000000BF  8B 1D 00000004 R		mov		ebx,	wide			; move wide into ebx
+ 000000C5  99				cdq								; convert doubleword in eax (var long) to quadword in edx:eax
+
+ 000000C6  F7 FB			idiv		ebx					; Signed divide what is found in eax, by the integer in ebx
+
+					dtoa	result1, eax			; Convert eax to ascii, store in sumascii
+					output	resultLbl,	result1		; output sum
+					
+					;******************************************************
+					;	Part Two
+					;	Grades
+					;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+					;	example input:	80, 96, 64, 100
+					;	sum = 80 + 96 + 64 + 100 + 100 = 440
+					;	avg = 440 / 5 = 88
+
+					input   promptG1, string, 30	; get Grade1
+					atod    string					; convert to integer
+ 00000126  A3 000000D7 R		mov     grade1, eax				; store eax value into memory into varA
+
+					input   promptG2, string, 30	; get Grade2
+					atod    string					; convert to integer
+ 00000158  A3 000000DB R		mov     grade2, eax				; store eax value into memory into varB
+
+					input   promptG3, string, 30	; get Grade3
+					atod    string					; convert to integer
+ 0000018A  A3 000000DF R		mov     grade3, eax				; store eax value into memory into varB
+
+					input   promptG4, string, 30	; get Grade4
+					atod    string					; convert to integer
+ 000001BC  A3 000000E3 R		mov     grade4, eax				; store eax value into memory into varB
+
+ 000001C1  A1 000000D7 R		mov		eax,		grade1		; store grade1 into eax
+ 000001C6  03 05 000000DB R		add		eax,		grade2		; add grade2
+ 000001CC  03 05 000000DF R		add		eax,		grade3		; add grade3
+ 000001D2  03 05 000000E3 R		add		eax,		grade4		; add grade4
+ 000001D8  03 05 000000E3 R		add		eax,		grade4		; twice, because it's a Final exam grade and worth double
+ 000001DE  A3 000000E7 R		mov		gradeSum,	eax			; store value in eax, into gradeSum in memory
+					dtoa	sumascii,	eax			; convert value in eax to ascii, store in memory as string
+
+ 000001FB  BB 00000005			mov		ebx,		5			; move the divisor into ebx
+ 00000200  99				cdq								; convert the doubleword gradeSum value in eax, to a quadword over edx:eax
+ 00000201  F7 FB			idiv	ebx						; divide eax by ebx to get average
+
+					dtoa	avgascii, eax			; Convert and store the "average" value in eax to avgascii
+
+					; printing out the grades now! Notice that it prints out all of gradeSumPrompt, sumascii, gradeAvgPrompt
+					; and avgascii because *only avgascii is a string that is null-terminated with a 0*
+					; They're stored right next to each other in memory, so it loads all the bytes, or chars, starting at
+					; gradeSumPrompt until it hits a null terminator, aka End Of Feed.
+
+					output	gradeLbl,	gradeSumPrompt	;	print
+
+ 00000234  B8 00000000			mov     eax, 0; exit with return code 0
+ 00000239  C3				ret
+ 0000023A			_MainProc ENDP
+				END
+Microsoft (R) Macro Assembler Version 14.10.25019.0	    09/30/17 18:22:22
+CSC384HW2.asm						     Symbols 2 - 1
+
+
+
+
+Macros:
+
+                N a m e                 Type
+
+atod . . . . . . . . . . . . . .	Proc
+atow . . . . . . . . . . . . . .	Proc
+dtoa . . . . . . . . . . . . . .	Proc
+input  . . . . . . . . . . . . .	Proc
+output . . . . . . . . . . . . .	Proc
+wtoa . . . . . . . . . . . . . .	Proc
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 0000015E Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000023A Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+_MainProc  . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 0000023A Public
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000000h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+_getInput  . . . . . . . . . . .	L Near	 00000000 FLAT	External
+_showOutput  . . . . . . . . . .	L Near	 00000000 FLAT	External
+atodproc . . . . . . . . . . . .	L Near	 00000000 FLAT	External
+atowproc . . . . . . . . . . . .	L Near	 00000000 FLAT	External
+avgascii . . . . . . . . . . . .	Byte	 00000152 _DATA	
+dtoaproc . . . . . . . . . . . .	L Near	 00000000 FLAT	External
+grade1 . . . . . . . . . . . . .	DWord	 000000D7 _DATA	
+grade2 . . . . . . . . . . . . .	DWord	 000000DB _DATA	
+grade3 . . . . . . . . . . . . .	DWord	 000000DF _DATA	
+grade4 . . . . . . . . . . . . .	DWord	 000000E3 _DATA	
+gradeAvgPrompt . . . . . . . . .	Byte	 00000143 _DATA	
+gradeLbl . . . . . . . . . . . .	Byte	 00000123 _DATA	
+gradeSumPrompt . . . . . . . . .	Byte	 0000012B _DATA	
+gradeSum . . . . . . . . . . . .	DWord	 000000E7 _DATA	
+long . . . . . . . . . . . . . .	DWord	 00000000 _DATA	
+promptA  . . . . . . . . . . . .	Byte	 00000008 _DATA	
+promptB  . . . . . . . . . . . .	Byte	 0000002D _DATA	
+promptC  . . . . . . . . . . . .	Byte	 00000052 _DATA	
+promptG1 . . . . . . . . . . . .	Byte	 00000083 _DATA	
+promptG2 . . . . . . . . . . . .	Byte	 00000098 _DATA	
+promptG3 . . . . . . . . . . . .	Byte	 000000AD _DATA	
+promptG4 . . . . . . . . . . . .	Byte	 000000C2 _DATA	
+result1  . . . . . . . . . . . .	Byte	 00000117 _DATA	
+resultLbl  . . . . . . . . . . .	Byte	 00000109 _DATA	
+string . . . . . . . . . . . . .	Byte	 000000EB _DATA	
+sumascii . . . . . . . . . . . .	Byte	 00000136 _DATA	
+varA . . . . . . . . . . . . . .	DWord	 00000077 _DATA	
+varB . . . . . . . . . . . . . .	DWord	 0000007B _DATA	
+varC . . . . . . . . . . . . . .	DWord	 0000007F _DATA	
+wide . . . . . . . . . . . . . .	DWord	 00000004 _DATA	
+wtoaproc . . . . . . . . . . . .	L Near	 00000000 FLAT	External
+
+	   0 Warnings
+	   0 Errors

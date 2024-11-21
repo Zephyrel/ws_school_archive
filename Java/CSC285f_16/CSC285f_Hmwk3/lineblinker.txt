@@ -1,0 +1,7 @@
+Line Blinker
+A line oscillates between two states. This is a stable "blinker."
+5 5
+1
+2 1
+2 2
+2 3 

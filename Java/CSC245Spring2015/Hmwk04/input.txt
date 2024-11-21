@@ -1,0 +1,4 @@
+Black Eyed_Peas 200 1 36 13
+Broccoli 50 0.6 -10 4.2
+Jello 94 0.2 23 0.03
+Brussels_Sprouts -38 0.3 8 -3

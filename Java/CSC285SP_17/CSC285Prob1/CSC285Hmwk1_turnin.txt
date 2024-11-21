@@ -1,0 +1,277 @@
+package csc285prob1;
+
+/*/
+ *Author:	Russell Ferguson
+ *Date:		February 2, 2016
+ *Class:	CSC285 - Data Structures
+ *Professor:Kent Pickett - Missouri Western State University
+ */
+public class Shapes{
+
+	public static void main(String[] args){
+		//Make an array of various objects that inherit the solids abstraction
+		Solids MySolids[] =	{new Cubes(4,4,4), new Cubes(8,8,8), new Spheres(6,6,6), new Spheres(3,3,3),new Cones(5,6,6),
+							new Cones(3,12,12), new Bricks(3,6,9), new Bricks(2,4,6), new TCone(5,6,3), new TCone(8,4,6)};
+		final int arrayLength=MySolids.length;
+		int index=0;	//For targeting the shape with min/max surface area
+		//Print each solid
+		System.out.println("Printing All Solids...\n----------------------------------------------");
+		for(int i=0;i<arrayLength;i++){
+			MySolids[i].printSolid();
+		}
+		System.out.println("\nPrinting All Solids' Area and Volumes only...\n-----------------------------------------------");
+		//Calc and print total area and total volume for all solids
+		for(int i=0;i<arrayLength;i++){
+			MySolids[i].printVolArea();
+		}
+		
+		//Find and Print object with Max Area
+		System.out.println("\nFinding Solid with Maximum Surface Area...\n-----------------------------------------------");
+		for(int i=0;i<arrayLength;i++){
+			if(MySolids[i].compareTo(MySolids[index])>0.0){
+				index=i;
+			}
+		}
+		System.out.println("The Solid in the Array of Solids with the Max Surface Areas is at Index: "+index);
+		MySolids[index].printSolid();
+		
+		//Find and Print Object with Min Area
+		System.out.println("\nFinding Solid with Minimum Surface Area...\n-----------------------------------------------");
+		for(int i=0;i<arrayLength;i++){
+			if(MySolids[i].compareTo(MySolids[index])<0.0){
+				index=i;
+			}
+		}
+		System.out.println("\nThe Solid in the Array of Solids with the Min Surface Areas is at Index: "+index);
+		MySolids[index].printSolid();
+		
+		//Sort the array MySolids based on area, and print. Going to use bubble sort
+		System.out.println("\nPrinting All Solids, Sorted Greatest Surface Area to Least...\n----------------------------------------------");
+		for(int i=0;i<arrayLength-1;i++){
+			for(int j=1;j<arrayLength-i;j++){
+				if(MySolids[j-1].area<MySolids[j].area){
+					Solids tmp=MySolids[j-1];
+					MySolids[j-1]=MySolids[j];
+					MySolids[j]=tmp;
+				}
+			}
+		}
+		//Print each solid
+		for(int i=0;i<arrayLength;i++){
+			MySolids[i].printSolid();
+		}
+	}
+}	
+abstract class Solids{
+	//basic measurement vars 
+	protected int len;	//I'd rather name these a, b, c
+	protected int wid;
+	protected int hig;
+	protected double area; //surface area
+	protected double volume;
+
+	//methods - calculating, "getters", print.
+	abstract public void calcVol();	//Depending on the solid, calculates differently. Abstract.
+	abstract public void calcArea();	//Same as above, but Surface Area instead. Abstract.
+	/*public double getVol(){	//Getter for Volume. Not needed.
+		return volume;
+	}
+	public double getArea(){ //Getter for SurfArea. Not needed.
+		return area;
+	}*/
+	abstract public void printSolid(); //name, major dimensions, area/volume. Abstract.
+	abstract public void printVolArea(); //prints shape, surface area and volume. Abstract.
+	public double compareTo(Solids A){ //Compares Surface Area of this Solid, to a second Solid
+		double compare=this.area-A.area;
+		return compare;
+	}
+	public void swap(Solids A, Solids B){
+	Solids tmp=A;
+	A=B;
+	B=tmp;
+	}
+}	
+//Solids subclasses
+class Cubes extends Solids{	//Done
+	//Side, Side, Side
+	public Cubes(int i, int j, int k){
+		len=i;
+		hig=j;
+		wid=k;
+		calcVol();
+		calcArea();
+	}
+	@Override
+	public void calcVol() {
+		volume=len*len*len;
+	}
+	@Override
+	public void calcArea() {
+		area=6*(len*len);
+	}
+	@Override
+	public void printSolid() {
+		System.out.printf("Cube:\t\tSide Length:\t%3d\t\t\t\t\t\tVolume: %3.4f  \tSurface Area: %3.4f\n", len, volume, area);
+	}
+	@Override
+	public void printVolArea(){
+		System.out.printf("Cube:\t\tVolume: %3.4f  \tSurface Area: %3.4f\n", volume, area);
+	}
+}
+class Spheres extends Solids{ //Done
+	//(radius, radius, radius)
+	public Spheres(int i, int j, int k){
+		len=i;
+		hig=j;
+		wid=k;
+		calcVol();
+		calcArea();
+	}
+	@Override
+	public void calcVol(){
+		volume=(4.0/3.0)*(Math.PI)*(len*len*len);
+	}
+	@Override
+	public void calcArea(){
+		area=4.0*Math.PI*(len*len);
+	}
+	@Override
+	public void printSolid(){
+		System.out.printf("Sphere:\t\tRadius: \t%3d \t\t\t\t\t\tVolume: %3.4f   \tSurface Area: %3.4f\n", len, volume, area);
+	}
+	@Override
+	public void printVolArea(){
+		System.out.printf("Sphere:\t\tVolume: %3.4f  \tSurface Area: %3.4f\n", volume, area);
+	}
+}
+class Cones extends Solids{ //Done
+	//(radius, height, height)
+	public Cones(int i, int j, int k){
+		len=i;
+		hig=j;
+		wid=k;
+		calcVol();
+		calcArea();
+	}
+	@Override
+	public void calcVol() {
+		volume=(1.0/3.0)*Math.PI*(len*len)*hig;
+	}
+	@Override
+	public void calcArea() {
+		area=Math.PI*len*(len+Math.sqrt((hig*hig)+(len*len)));
+	}
+	@Override
+	public void printSolid() {
+		System.out.printf("Cones:\t\tRadius: \t%3d\tHeight:%3d\t\t\t\tVolume: %3.4f  \tSurface Area: %3.4f\n", len, hig, volume, area);
+	}
+	@Override
+	public void printVolArea(){
+		System.out.printf("Cones:\t\tVolume: %3.4f  \tSurface Area: %3.4f\n", volume, area);
+	}
+}
+class Bricks extends Solids{ //Done
+	//Technically the term is "cuboid"
+	//length, height, width
+	public Bricks(int i, int j, int k){
+		len=i;
+		hig=j;
+		wid=k;
+		calcVol();
+		calcArea();
+	}
+	@Override
+	public void calcVol() {
+		volume=len*hig*wid;
+	}
+	@Override
+	public void calcArea() {
+		area=2*(len*wid)+2*(len*hig)+2*(wid*hig);
+	}
+	@Override
+	public void printSolid() {
+		System.out.printf("Cuboid:\t\tLength: \t%3d\tHeight:%3d\tWidth:%3d\t\tVolume: %3.4f  \tSurface Area: %3.4f\n", len, hig, wid, volume, area);
+	}
+	@Override
+	public void printVolArea(){
+		System.out.printf("Cuboid:\t\tVolume: %3.4f  \tSurface Area: %3.4f\n", volume, area);
+	}
+}
+class TCone extends Solids{	//Done
+	//radius1, height, radius2
+	public TCone(int i, int j, int k){
+		len=i;
+		hig=j;
+		wid=k;
+		calcVol();
+		calcArea();
+	}
+	@Override
+	public void calcVol() {
+		volume=(1.0/3.0)*(Math.PI)*(((len*len)+(len*wid)+(wid*wid))*hig);
+	}
+	@Override
+	public void calcArea() {
+		area=(Math.PI)*(Math.sqrt((hig*hig)+((len*len)-(wid*wid))*((len*len)-(wid*wid))))*(len+wid)+(len*len)+(wid*wid);
+	}
+	@Override
+	public void printSolid() {
+		System.out.printf("Truncated Cone:\tRadius (Base):\t%3d\tHeight:%3d\tRadius (Top):%3d\tVolume: %3.4f  \tSurface Area: %3.4f\n", len, hig, wid, volume, area);
+	}
+	@Override
+	public void printVolArea(){
+		System.out.printf("Truncated Cone:\tVolume: %3.4f  \tSurface Area: %3.4f\n", volume, area);
+	}
+}
+////////////////////////
+////	Output		////
+////////////////////////
+Printing All Solids...
+----------------------------------------------
+Cube:		Side Length:	  4						Volume: 64.0000  	Surface Area: 96.0000
+Cube:		Side Length:	  8						Volume: 512.0000  	Surface Area: 384.0000
+Sphere:		Radius: 	  6 						Volume: 904.7787   	Surface Area: 452.3893
+Sphere:		Radius: 	  3 						Volume: 113.0973   	Surface Area: 113.0973
+Cones:		Radius: 	  5	Height:  6				Volume: 157.0796  	Surface Area: 201.2229
+Cones:		Radius: 	  3	Height: 12				Volume: 113.0973  	Surface Area: 144.8524
+Cuboid:		Length: 	  3	Height:  6	Width:  9		Volume: 162.0000  	Surface Area: 198.0000
+Cuboid:		Length: 	  2	Height:  4	Width:  6		Volume: 48.0000  	Surface Area: 88.0000
+Truncated Cone:	Radius (Base):	  5	Height:  6	Radius (Top):  3	Volume: 307.8761  	Surface Area: 463.4685
+Truncated Cone:	Radius (Base):	  8	Height:  4	Radius (Top):  6	Volume: 619.9410  	Surface Area: 1344.0072
+
+Printing All Solids' Area and Volumes only...
+-----------------------------------------------
+Cube:		Volume: 64.0000  	Surface Area: 96.0000
+Cube:		Volume: 512.0000  	Surface Area: 384.0000
+Sphere:		Volume: 904.7787  	Surface Area: 452.3893
+Sphere:		Volume: 113.0973  	Surface Area: 113.0973
+Cones:		Volume: 157.0796  	Surface Area: 201.2229
+Cones:		Volume: 113.0973  	Surface Area: 144.8524
+Cuboid:		Volume: 162.0000  	Surface Area: 198.0000
+Cuboid:		Volume: 48.0000  	Surface Area: 88.0000
+Truncated Cone:	Volume: 307.8761  	Surface Area: 463.4685
+Truncated Cone:	Volume: 619.9410  	Surface Area: 1344.0072
+
+Finding Solid with Maximum Surface Area...
+-----------------------------------------------
+The Solid in the Array of Solids with the Max Surface Areas is at Index: 9
+Truncated Cone:	Radius (Base):	  8	Height:  4	Radius (Top):  6	Volume: 619.9410  	Surface Area: 1344.0072
+
+Finding Solid with Minimum Surface Area...
+-----------------------------------------------
+
+The Solid in the Array of Solids with the Min Surface Areas is at Index: 7
+Cuboid:		Length: 	  2	Height:  4	Width:  6		Volume: 48.0000  	Surface Area: 88.0000
+
+Printing All Solids, Sorted Greatest Surface Area to Least...
+----------------------------------------------
+Truncated Cone:	Radius (Base):	  8	Height:  4	Radius (Top):  6	Volume: 619.9410  	Surface Area: 1344.0072
+Truncated Cone:	Radius (Base):	  5	Height:  6	Radius (Top):  3	Volume: 307.8761  	Surface Area: 463.4685
+Sphere:		Radius: 	  6 						Volume: 904.7787   	Surface Area: 452.3893
+Cube:		Side Length:	  8						Volume: 512.0000  	Surface Area: 384.0000
+Cones:		Radius: 	  5	Height:  6				Volume: 157.0796  	Surface Area: 201.2229
+Cuboid:		Length: 	  3	Height:  6	Width:  9		Volume: 162.0000  	Surface Area: 198.0000
+Cones:		Radius: 	  3	Height: 12				Volume: 113.0973  	Surface Area: 144.8524
+Sphere:		Radius: 	  3 						Volume: 113.0973   	Surface Area: 113.0973
+Cube:		Side Length:	  4						Volume: 64.0000  	Surface Area: 96.0000
+Cuboid:		Length: 	  2	Height:  4	Width:  6		Volume: 48.0000  	Surface Area: 88.0000

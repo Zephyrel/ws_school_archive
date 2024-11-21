@@ -1,0 +1,88 @@
+package hmwk05;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+/**
+ * @author Russell Ferguson
+ * @date 2/12/2015
+ */
+
+/*
+ * Write a "Pizza" class. The pizza class has three data fields.
+ * 
+ * 	integer representing the number of inches
+ * 	boolean indicating whether it is a
+ * 	thin crust String that lists the toppings.
+ * 
+ * Write the following methods:
+ * 	A constructor that takes the three fields as arguments
+ * 	A "noarg" constructor that calls the first constructor and sets the
+ * 	inches to 9" the crust to thin and the toppings to "Cheese"
+ * 	Setters for all fields
+ * 	Getters for all fields
+ * 	toString that prints the three fields in a nice
+ * 		format compareTo<Pizza>. The comparison is first done on the size, Ties in
+ * 		size are based on the crust, and remaining ties are broken based on the
+ * 		String. 
+ * 
+ * The input program should read the data, put it into an array, sort
+ * the array, and print out the sorted array. There may be up to 20 records. The
+ * file is "Tab Delimited" and looks like the following
+ */
+
+public class hmwk05 {
+	public static void main(String[] args){
+		final int MAX = 20;
+		
+
+	}
+	
+	public static void readInput(){
+		try{
+			Scanner inputFile = new Scanner(new File("Tab Delimited.txt"));
+			int i = 1;
+			while(inputFile.hasNext() && (i < 20)){
+				pizzaArray[i].setAll(inputFile.nextInt(), inputFile.next(), inputFile.nextln());
+				i+=1;
+			}
+			inputFile.close();
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+		
+		//Number one should be the top most, meaning it has the least height, Thin Crust, and the Least toppings.
+		//Store the pizza being compared to Number One in a temporary
+		//If the pizza being compared to Number One is found to be less than
+		//Bump everything in the array up one
+		for(int i=0; i<20; i++){
+			Pizza pizzaOne = pizzaArray[1];
+			Pizza pizzaMain = pizzaArray[i];
+			Pizza pizzaTemp = new Pizza();
+			
+			if(Pizza.compareTo(pizzaArray[i], pizzaArray[1]) == 1){
+				//the compared pizza is greater than the first pizza, do not shift
+				i++;
+				
+			}else if(Pizza.compareTo(pizzaArray[i], pizzaArray[1]) == -1){
+				//the compared pizza is less than the first pizza, shift
+				//Put pizzaArray[j=0] into a temporary pizza
+				//set pizzaArray[j=0] as pizzaMain[i]
+				//increment[j]
+				//set pizzaTemp as pizzaArray[j]
+				//
+				for(j=1; j<i; j++){
+					pizzaTemp = pizzaArray[j]
+				}
+				i++;
+			}else if(Pizza.compareTo(pizzaArray[i], pizzaArray[1]) == 0){
+				//the compared pizza is equal to the first pizza, shift
+				
+				i++;
+			}
+			
+			
+		}
+	}
+}

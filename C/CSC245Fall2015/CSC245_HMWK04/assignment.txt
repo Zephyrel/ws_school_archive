@@ -1,0 +1,13 @@
+Read the 128-byte ID3v1 tag at the end of the an MP3 file and print out the data.  (Overachievers can do the ID3v3 tag at the beginning of the file).  
+
+You can read about ID3v1 tags at https://en.wikipedia.org/wiki/ID3
+
+You should make a struct that will hold the data from the tag.  It is up to you whether it holds the "TAG" field itself.
+The struct will contain a union for the one field that can either hold 30 of comment or 28 characters of comment and 2 bytes of numerical data.
+Your struct should be in a module consisting of a .h and a .cpp file.  The struct should be accompanied by any utility methods.
+At a minimum there should be two functions.
+
+    A "readTag" method that accepts a file name, moves to the -128 position in the file and then does a binary read of the entire tag at the same time.
+    A "printTag" method that prints the fields of the tag.  The read method will have to deal with the arrays of characters because they are not necessarily null-terminated.  
+
+Not all mp3 files have ID3v1 tags, but your program should manage any of them that do.  One sample file is provided, but you should find some others to test.

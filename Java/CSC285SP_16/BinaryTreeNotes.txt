@@ -1,0 +1,14 @@
+Binary Trees are obects connected by two pointers,
+one pointing to the left and one pointing to the right
+a)	Objects to the left of the root or parent are <.
+	Objects to the right of the root or parent are >.
+b)	There are no duplicates in a binary tree.
+
+	 75
+	/  \
+   38	83
+  / \    \
+ 21 42   89
+ /\ \    
+ 
+BreadthFirst()

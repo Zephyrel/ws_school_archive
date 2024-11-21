@@ -1,0 +1,42 @@
+https://docs.google.com/document/d/1qtdR_7AkJfkSoVzgRqEVfxmbY9fbR1XUyRS5ZrFEyaw/edit#
+
+File format:
+Line 1: Name of the image.  It should probably be similar to the file name. (String)
+Line 2: A one-line narrative description about the file.
+Line 3: Two integers  representing the rows and columns  (the size of the display)  100 would be nice in many cases.
+Line 4: Cycle length as an integer.  Some images produce their "interesting" results only on given cycles.  For example, some gliders reform the image of the glider every 30 cycles.  We will use this to only display every 30th cycle unless the user is in debugging mode. (Often, this number will be "1"
+Line 5 and + ... eof row, column coordinate pairs of live cells.
+
+The Array
+You must represent the game as a 3-dimensional table of Cells.  "True means alive and False is dead
+[int set to the row number in the data file] -- row number
+[int set to column number in the data file.] -- column number
+[Int  set to 2] -- Used to switch active and next generation.  In practice the game requires that there are two grids.  One grid represents the current generation, and the other grid represents the next.  You will need to change between 0 and 1 in each generation
+Torus or Finite
+The difference between "torus" and finite" is how the edges are handled.  In a torus the edges "wrap" to the adjacent edge.  So the row to the left of row 0 is row (n-1) where n is the length of the side.
+
+In a finite game, assume that the outermost edge is surrounded by "dead" or empty cells.
+
+Cell Class
+The Cell should be a private class within your game Class.  It should have a private field that is a boolean.  The field indicates whether the cell is alive or dead.  See the UML diagram for details.  The cell also contains a static private member that says whether the edge cells have neighbors if it is at the edge of the grid (true for a torus grid and false for a finite grid)
+
+GetFile Class
+This class opens, reads, and closes the file.  It holds each of the fields as records.  It should have both getters and setters.  The getters will be used in your program to get things started.  The setters would only be used if you were debugging and needed to "force" an option.  In the final program you turn in there should not be any use of setters.  
+
+Hmm… On second thought maybe I will just give you the GetFile class as a Jar file.
+Update 1:
+
+The display
+I want the display done as a class.  Even if you just use text output.  To display a graph the main program should call showGeneration.  It should take as parameters a Game object.  The game object should have a method called "getCurrentGeneration" that returns a true or false.  The display class should use the current generation.
+
+Each cell in the display should be a private internal class inside the display class.  
+Text Display Option
+Text Display option is lame, but acceptable for full credit.  It is perfectly fine for debugging.  If you turn it in this way you can still get full credit.  I will just assume that either you are really busy or that you actually have a life.
+
+If you do a text option insert a Form Feed ('\u000C') before each new grid.
+
+JavaFX Option
+
+You can look at the ShowCircle example near the beginning of chapter 14.  I suggest that you use squares as your cell.  You should extend the rectangle class to make the square class.  I suggest that all of your squares have slightly rounded corners so that you can actually see the grid.I guess you could also use small circles for each spot.  Figure out what you think looks best.  Another strategy might be to put grid lines on the display and then put the cells over the grid.
+
+I think your game display will work best as a JavaFX "Stage"  The neatest implementation might be to create the stage in background and then display it all at once.  This should avoid seeing the stage being drawn.

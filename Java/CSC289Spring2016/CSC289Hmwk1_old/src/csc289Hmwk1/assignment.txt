@@ -1,0 +1,26 @@
+Implement a scanner in Java for the language C-Minus. Refer to the C-Minus Compiler Project
+(posted in the course materials folder) for the lexical conventions of C-Minus. An executable
+jar file and some test files are provided for you to see what your program should do. You can
+run the jar file using the command "java -jar "path-to-the-jar-file\HandCodedScanner.jar" to
+test scanning the source code from command line interactively or 
+"java -jar "path-to-the-jar-file\HandCodedScanner.jar -i inputfile" to test scanning the source code from a file.
+
+Hope the following instructions give you some helpful hints.
+
+1. Create an enum java file called CMinusTokens.java to hold c-minus token types.	//DONE
+
+2. Create an enum java file called CMinusDFAStates.java to hold c-minus DFA states.	//DONE
+
+3. Create a java class called CMinusDFA.java. This class contains the allowed character set,
+	namely the alphabet, and the set of DFA states. It also should contain the transition table
+	and a method to lookup the table based upon the current state and input char. 
+
+4. Create a java file called CMinusScanner.java. The scanner contains an instance of the CMinusDFA
+	and use it to identify the tokens from the characters read from a file or the command line.
+
+5. Create a main java program to initialize an instance of CMinusScanner and allow the user to
+	specify where to get the input source program, either from a file or from the command line.
+	Then start scanning and display errors if any. 
+
+Zip and submit your source code only. No jar file will be accepted. Whatever you submit will be
+graded as is. No correction or update will be allowed after the deadline.

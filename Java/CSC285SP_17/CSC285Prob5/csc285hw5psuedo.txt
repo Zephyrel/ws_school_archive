@@ -1,0 +1,55 @@
+package CSC285Prob5;
+
+import java.io.*;
+import java.util.*;
+
+/*
+ * Russell Ferguson
+ * March 22, 2017
+ * CSC285 Data Structures - Kent Pickett
+ */
+ 
+ /////////////////////////
+ //						//
+ //		PSUEDO CODE		//
+ //						//
+ /////////////////////////
+public class CSC285Prob5 {
+	public static void main(String[] args){
+
+		LinkManager<Character> oprtrStack = new LinkManager<Character>();
+		LinkManager<Double> oprndStack = new LinkManager<Double>();
+		
+		char[] expr1 = "A@(2*(A-C*D))+(9*B/(2*C+1)-B*3)+E%(F-A)".toCharArray();
+		char[] expr2 = "B*(3@(A-D)%(B-C@D))+4@D*2".toCharArray();
+		
+		for(int i = 0; i<expr1.length;i++){
+			if(Character.isDigit(expr1[i])){ //is a digit, push on oprnd
+			}else if(Character.isAlphabetic(expr1[i])){  //is a letter variable, getVal and push oprnd
+			}else if(expr1[i]=='('){  //beginning of () set expr, push oprtr
+			}else if(expr1[i]==')'){  //end of () set expr, evaluate, pop ( at end
+			}else{
+				//another operator, get priority of it, evaluate oprtrStack
+				//if it has an oprtr and of greater priority
+				//then push the operator you found after evaluating
+				//greater operators that were on the stack
+			}
+		}
+		//eval the rest of the stuff on the stack until one operand remains, print
+
+		//reinitialize stacks to an empty slate, rinse repeat for second expression
+	}
+	
+	//evaluates a single operator between two operands
+	//switch case statement, with errors for divide by zero and negative exponential operations
+	public static double eval(char oprtr, double oper1, double oper2){}
+	
+	//operates on an expression by popping off stacks, calling eval and pushes the operand result on the stack
+	public static void evalExpr(LinkManager<Double> oprnds, LinkManager<Character> oprtrs){}
+	
+	//returns a value depending on the character, case switch statement here
+	public static double getVal(Character chara){}
+	
+	//returns a priority value from a character representing an operation, case switch statement here
+	public static int getPrio(Character chara){}
+}

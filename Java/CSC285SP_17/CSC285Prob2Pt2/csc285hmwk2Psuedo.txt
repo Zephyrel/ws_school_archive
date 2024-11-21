@@ -1,0 +1,67 @@
+import java.io.*;
+import java.util.*;
+
+PSUEDO CODE FILE
+Almost nothing changed, just the additions of a total hours and gpa calculator, more stuff to print
+
+public class CSC285Prob2{
+	public static void main(String[] args){
+		Make a temp Student object, initialize empty arraylist of student, init scanner
+		try catch open a file with the Scanner
+		
+		Print "Test Avg"
+		while(input.hasNextLine()){//Scan file and make student objects, and add to Student arraylist }
+		Print as read
+
+		
+		Delete Students by StudentID 42P4 and 45A3 from ArrayList, print records again
+		
+		//Add the following students to the ArrayList, print additions
+		//StudentID	StudentName		Test 1	Test 2	Test3
+		//67T4		Clouse B		80		75		98
+		//45P5		Garrison J		75		78		72
+		//89P0		Singer A		85		95		99
+
+		
+		//Sort in Ascending order of greatest to least by Test Avg, print records
+		
+		//Then make a list of doubles from the paper assignment
+		//2.3,1.5,15.6,0.9,11.2,8.9,12.4,51.2,-3.5
+		//sort and print
+
+	}
+	
+	//methods
+	public static void AddStudent( ArrayList<Student> AcademicClass, Student Obj){ //adds a student	}
+	public static void DeleteStudent( ArrayList<Student> AcademicClass, String StuID){ //Provide string of StuId, scan arraylist and delete matching stu, print, end method	}
+	public static void SortAsc( ArrayList<Student> AcademicClass){ //Bubble Sort Ascending (Greatest to Least) }
+	public static void printRecords(ArrayList<Student> AcademicClass){ //Prints whole table of records }
+}
+
+class Student implements Comparable<Student>{
+	char[] StudentID=new char[4];
+	int test1;
+	int test2;
+	int test3;
+	//NEW STUFF
+	int hours;
+	float gpa;
+	char[] StudentName=new char[10];
+	//basic constructor and other constructor with appropriate assignments
+	public Student(){
+		StudentID = "Dbug"
+		StudentName = Error
+	}
+	public Student(char[] ID, int test1, int test2, int test3,	int hours, float gpa, char[] name){ //assignment code here}
+	//methods
+	public int compareTo(Student a){//make compare to to sort easily}
+	public double getAverage(){}
+	public String getLetter(){ //look at grade percentage, return letter grade}
+	public String toString(){//Make a nice neat little string representation for the student object}
+	public String getStuClass(){
+		get hours, return "FR" if 0-30 hrs, "SO" 31-60hrs, "JR" 61-90 hrs, "SR" 91+
+	}
+	public float recalcGPA(){
+		return ((this.gpa*this.hours)+(3*this.gpa))/(hours+3);
+	}
+}

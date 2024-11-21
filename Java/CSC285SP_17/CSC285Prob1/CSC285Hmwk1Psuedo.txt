@@ -1,0 +1,65 @@
+public class Shapes{
+
+	public static void main(String[] args){
+		//Make an array of various objects that inherit the solids abstraction
+		Solids MySolids[] =	{new this, new that, new etc.};
+		final int arrayLength=MySolids.length;
+
+		//Print each solid
+		for (i<mysolids[].length; i++){print mysolids[i]}
+		//Calc and print total area and total volume for all solids
+		for(int i=0;i<arrayLength;i++){
+			MySolids[i].printVolArea();
+		}
+		
+		//Find and Print object with Max Area
+		index = 0;
+		for(int i=0;i<arrayLength;i++){
+			if(MySolids[i]>MySolids[index]){index = i};
+		}
+		//print solid found
+		
+		//Find and Print Object with Min Area, same as above but change greater-than to less-than
+		
+		//Sort the array MySolids based on surface area, and print. Going to use bubble sort
+
+		for(int i=0;i<arrayLength-1;i++){
+			for(int j=1;j<arrayLength-i;j++){
+				if(MySolids[j-1].area<MySolids[j].area){
+					Solids tmp=MySolids[j-1];
+					MySolids[j-1]=MySolids[j];
+					MySolids[j]=tmp;
+				}
+			}
+		}
+		
+		//Print each solid
+		for(int i=0;i<arrayLength;i++){
+			MySolids[i].printSolid();
+		}
+	}
+}	
+abstract class Solids{
+	//basic measurement vars 
+	protected int len;	//I'd rather name these a, b, c
+	protected int wid;
+	protected int hig;
+	protected double area; //surface area
+	protected double volume;
+
+	//methods - calculating, "getters", print.
+	abstract public void calcVol();	//Depending on the solid, calculates differently. Abstract.
+	abstract public void calcArea();	//Same as above, but Surface Area instead. Abstract.
+	public double getVol(){	//Getter for Volume. }
+	public double getArea(){ //Getter for SurfArea. }
+	abstract public void printSolid(); //name, major dimensions, area/volume. Abstract.
+	abstract public void printVolArea(); //prints shape, surface area and volume. Abstract.
+	public double compareTo(Solids A){ //Compares Surface Area of this Solid, to a second Solid }
+	public void swap(Solids A, Solids B){//swap two solids }
+}	
+//Solids subclasses, implement all 4 abstracts and proper math equations
+class Cubes extends Solids{ //Side, Side, Side}
+class Spheres extends Solids{ //radius, radius, radius}
+class Cones extends Solids{ //radius, height, height}
+class Bricks extends Solids{ //length, height, width}
+class TCone extends Solids{	//radius1, height, radius2}

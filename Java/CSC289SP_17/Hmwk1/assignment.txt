@@ -1,0 +1,16 @@
+Use JFlex to create a pattern recognizer for email and IP addresses.
+The common email domain suffixes should be identified such as .com, .org, .gov, .mil, .net, etc.
+An IP address is composed of 4 octets separated by dots. Each octet could be 1-3 digit long within range [0-255].
+
+Submit your JFlex input file and a source file to test your scanner.
+
+/* IP ADDRESS
+* Format is 4 octets (0-255) seperated by .'s
+* i.e XXX.XXX.XXX.XXX and X.X.X.X are both valid
+*/
+
+
+/*	EMAIL ADDRESS
+*	Format:	name@domain.toplevelsuffix
+*
+*/

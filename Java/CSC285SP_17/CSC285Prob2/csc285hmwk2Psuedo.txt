@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+
+public class CSC285Prob2{
+	public static void main(String[] args){
+		Make a temp Student object, initialize empty arraylist of student, init scanner
+		try catch open a file with the Scanner
+		
+		Print "Test Avg"
+		while(input.hasNextLine()){//Scan file and make student objects, and add to Student arraylist }
+		Print as read
+
+		
+		Delete Students by StudentID 42P4 and 45A3 from ArrayList, print records again
+		
+		//Add the following students to the ArrayList, print additions
+		//StudentID	StudentName		Test 1	Test 2	Test3
+		//67T4		Clouse B		80		75		98
+		//45P5		Garrison J		75		78		72
+		//89P0		Singer A		85		95		99
+
+		
+		//Sort in Ascending order of greatest to least by Test Avg, print records
+
+	}
+	
+	//methods
+	public static void AddStudent( ArrayList<Student> AcademicClass, Student Obj){ //adds a student	}
+	public static void DeleteStudent( ArrayList<Student> AcademicClass, String StuID){ //Provide string of StuId, scan arraylist and delete matching stu, print, end method	}
+	public static void SortAsc( ArrayList<Student> AcademicClass){ //Bubble Sort Ascending (Greatest to Least) }
+	public static void printRecords(ArrayList<Student> AcademicClass){ //Prints whole table of records }
+}
+
+class Student implements Comparable<Student>{
+	char[] StudentID=new char[4];
+	int test1;
+	int test2;
+	int test3;
+	char[] StudentName=new char[10];
+	//basic constructor and other constructor with appropriate assignments
+	public Student(){
+		StudentID = "Dbug"
+		StudentName = Error
+	}
+	public Student(char[] ID, int test1, int test2, int test3, char[] name){ //assignment code here}
+	//methods
+	public int compareTo(Student a){//make compare to to sort easily}
+	public double getAverage(){}
+	public String getLetter(){ //look at grade percentage, return letter grade}
+	public String toString(){//Make a nice neat little string representation for the student object}
+}

@@ -1,0 +1,51 @@
+Read from a file called input.txt.  Each line of the file contains a state name, the capital, and the population.
+You need to  create a struct to hold the three fields for one state's data.  Then create an array of the structs.
+You should sort the list into order by city, and print it.   Then sort it into order of population. and print it.
+The population should be stored as an integer, not a string or double.  A population of "1.1 Million" should be stored as 1100000 in int format.
+Reading from the command line.
+
+Read a "command line argument" from argv.  This will be an integer that specifies how large the array should be.
+For example, if argv is "20" then the array would only have a size of 20, and the extra states would be skipped.
+On the other hand, if the value was "100" then there would be empty space at the end of the array.  If no value is specified, then the default value should be 50.
+
+We will go over reading from the command line in class.  I will do a commit to bitbucket.org with "argv" in the title of the commit.
+
+Eclipse is a gui, not the command line.  However, Eclipse will let you simulate a command line argument.  Follow these steps
+
+    Go to Project->Properties.
+    Find "Run/Debug"
+    Over on the right side there is a "New" button.  Click it
+    Choose C++ application
+    There should be a window with 4 tabs.  The second one should be "arguments"  Go to that tab.
+    There will be a large text box.  Type your desired command line arguments into that box.  In this case, type 10 .  It will look naked, but that is it.
+    Now if you hit the run button, argc should be 2 and the value 10 should show up in argv[1].  You can go back into the dialog box and change it to another value, or erase it later.
+
+struct
+
+You should have a struct for the state.  It should have three fields.  I recommend NOT using "state" for both the struct name and the field name.
+
+    state, a string
+    city, a string
+    population, an integer
+
+Your struct should be in a .h and .cpp pair of files.
+
+The .h and .cpp files should contain the following methods
+
+    struct parse(const char *line) // takes a line from the input file and returns a state struct
+    char * toString(struct state) //returns a string representing the state in a nice format.  Consider sprintf
+    int cmpCity(struct a, struct b) // returns a negative, zero, or positive integer std::string::compare
+    int cmpPopulation(struct a, struct b)
+    int cmpState(struct a, struct b)
+
+utility.h and utility.cpp
+
+You should have a module that contains basic utility functions.  You may add to this as the semester goes on.
+
+For now, it should contain three utility methods.
+
+    ltrim
+    rtrim
+    trim
+
+https://www.daniweb.com/programming/software-development/code/216919/implementing-string-trimming-ltrim-and-rtrim-in-c has some pretty good information.  Use it freely, but credit it.

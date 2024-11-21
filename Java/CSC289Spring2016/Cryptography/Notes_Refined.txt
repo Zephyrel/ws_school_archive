@@ -1,0 +1,161 @@
+CSC289 Cryptography Notes Refined
+
+===================================================================
+Part 1 - Modulus Operator and Arithmetic
+===================================================================
+First, we must explain the modulo operators and they're properties.
+Properties of modulo.
+In mathematical equations, a "." denotes a subscript.
+A subscript is the tiny meaningful numbers or letters
+at the foot of a variable, operator, or symbol.
+ε, lower-case epsilon, ALT code 238, denotes "element of"
+Z.n is the set of all integers from 0 to n.
+
+== Shorthand for Multiplication and Addition modulo. ==
+i +.n j	= (i + j) mod n and i *.n j = (i * j) mod n.
+
+== Definition (1st version) ==
+Let m, n be positive integers. Then m mod n is the
+remainder left when dividing m by n.
+Ex: 25 mod 4 = 1; 25 mod 5 = 0; 27 mod 5 = 2.
+We would like to extend this definition to negative m as well.
+
+== Definition (2nd version) ==
+For an integer m and positive integer n,
+m mod n is the smallest nonnegative integer r such that,
+for some integer q, m = nq + r.
+Ex: 25 mod 4 = 1; −25 mod 4 = 3.
+
+Note: In general, except if [m mod n] = 0,
+[(−m) mod n] = n − [m mod n] so
+[(−m) mod n] != [m mod n] unless
+[m mod n] = n/2.
+
+i mod n = (i + kn) mod n for all integers k.
+
+
+
+(Euclid’s Division Theorem)
+Let n be a positive integer. Then for every integer m,
+there exist unique integers q and r such that
+m = nq + r and 0 <= r < n.
+
+Addition and multiplication mod n satisfy the
+commutative, associative and distributive laws.
+(i + j) mod n	= (i + (j mod n)) mod n
+				= ((i mod n) + j) mod n
+				= ((i mod n) + (j mod n)) mod n,
+(i * j) mod n 	= (i * (j mod n)) mod n
+				= ((i mod n) * j) mod n
+				= ((i mod n) * (j mod n)) mod n.
+a +.n (b +.n c) = (a + (b +.n c)) mod n
+				= (a + ((b + c) mod n)) mod n
+				= (a + (b + c)) mod n
+				= ((a + b) + c) mod n
+				= ((a + b) mod n + c) mod n
+				= ((a +n b) + c) mod n
+				= (a +.n b) +.n c
+				
+If x ε Z.n, then x is a variable with possible
+integral values between 0 and n − 1.
+	>If x, y ε Z.n, we use x +.n y and x *.n y to perform
+		algebraic operations on x, y.
+	>Additive identity property: 0 +.n i = i.
+		Multiplicative identity property: 1 *.n i = i.
+	>a −.n b denotes a +.n (−b).
+	
+========================================================
+Part 2 - Inverses and Greatest Common Divisors
+========================================================
+== Expressing Divisors ==
+Positive integer m is a divisor of integer n
+if n = mq for some integer q
+	if m is a divisor of n we write m | n.
+		(say) “m divides n”
+	if m is a not a divisor of n we write m /| n.
+		“m does not divide n”
+		
+If p is a divisor of both m and n then p is a common divisor of m and n
+	gcd(m, n) denotes the greatest common divisor of m and n.
+	1 is aways a common divisor of m and n
+
+== Euclid Division Theorem, Restricted Version ==
+Let n be a positive integer. Then for every nonnegative
+integer m, there exist unique integers
+q, r such that m = nq + r and 0 <= r < n.
+	Note 1: By definition, r = m mod n.
+	Note 2: This is restricted because we assume that
+		m is nonnegative. Book problem shows how to
+		extend this to negative m as well.
+
+For every m, there is some pair q and r that satisfying m.
+We must also show that the pairs q and r are unique for every m
+Suppose that m = nq + r and m = nq' + r' with 0 <= r < n
+and 0 <= r' < n.
+0 = n(q − q') + r − r'	=>	n(q − q') = r' − r.
+|r'−r| < n				=>	|n(q−q')| = |r'−r| < n.
+Because n is a factor of the left side, the only way the inequality
+can hold is if |n(q − q')| = |r' − r| = 0.
+Therefore, q = q' and r = r',
+proving that q and r satisfying m are unique.		
+
+== Euclid's Greatest Common Divisor Algorithm ==
+=================================================
+If j, k, q, and r are nonnegative integers
+such that k = jq + r, then gcd(j, k) = gcd(r, j).
+=================================================
+Before getting to multiplicative inverses, we first
+see how to calculate gcd(j, k)
+Suppose k = jq + r. Is there a relationship between
+gcd(j, k) and gcd(r, j)?
+
+Proof 1:
+r = 0:
+Then gcd(r, j) = j since every number divides 0.
+But k = jq so gcd(k, j) = j = gcd(j, r)
+and we are done.
+
+Proof 2:
+r > 0:
+Let (d) be a common factor of (j, k)
+	{k = (i.1)d} and {j = (i.2)d} for some nonnegative (i.1, i.2).
+	d is a factor of {r = k − jq = (i.1 − (i.2)q)d}
+Let d be a common factor of (j, r)
+	j = i2d and r = i3d for some nonnegative i2, i3.
+	d is a factor of k = jq + r = (i2q + i3)d
+So d is a common factor of [j, k] iff (if and only if) d is a common factor of r, j
+	d = gcd(j, k) iff d = gcd(r, j)
+==================================================
+
+GCD(j, k) where 0 <= j < k
+	If j = 0 answer is k
+	Else
+		Write k = jq + r where r = k mod j
+		Answer is GCD(r, j)
+		
+Note that r is nonegative, and every time line 4 is executed,
+r < j, so the value of r decreases. Therefore, in a finite
+number of steps, process reaches j = 0 and terminates
+
+== Multiplicative Inverse ==
+
+If a has multiplicative inverse {a' ε Z.n},
+then for any {b ε Zn}, the equation {a *.n x = b} has the
+solution {x = a' *.n b}, and this solution is unique.
+
+Proof:
+If a has inverse a' ε Zn and (*) a·nx = b
+
+Given a, to decide whether a *.n x = b has a
+unique solution in Zn, it helps to know whether
+a has a multiplicative inverse in Z.n.
+
+Given a and n, if there exist integers
+x and y such that ax + ny = 1, then gcd(a, n) = 1
+— that is, a and n are relatively prime.
+
+Computing Inverses:
+Corollary 2.18: If an element a ε Z.n has an inverse,
+we can compute it by running Euclid’s extended GCD
+algorithm to determine integers x, y so that ax+ny = 1.
+The inverse of a ε Z.n is x mod n.

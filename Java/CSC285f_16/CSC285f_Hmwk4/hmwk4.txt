@@ -1,0 +1,17 @@
+Create a card deck.  Assume a standard 52-card deck.
+
+Your main() class should not be in a package.
+
+You should have a package that represents a linked list.
+
+You should create a package called Cards.  The package will have three classes plus the enumerated type for suits
+
+Card Class represents a single card.  There are three data members
+
+    Suit -- A public enumerated type
+    Value a byte from 1 through 13 
+    The unicode character for the card  See https://en.wikipedia.org/wiki/Playing_cards_in_Unicode.  You could hard-code this, but you might figure out an algorithmic way to convert the suit and value directly into unicode.
+
+Deck Class -- Basically the head of a linked list that holds cards.  Decks should preserve the order in which they are inserted.
+
+Hand Class -- This is extended from a Class.   A hand holds an unknown number of cards, but they are in order by suit, and within the suit they are in order by value.

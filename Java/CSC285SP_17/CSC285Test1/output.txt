@@ -1,0 +1,112 @@
+Dr. IM Bones
+Resident Boston Hospital
+Race African American
+SSN 455657890
+Patient Count 100
+Salary Base	$155,000.00
+COLA (15%)	$23,250.00
+Patient Adj	$38,750.00
+Total		$217,000.00
+Estimated Taxes
+Federal		$54,250.00
+Mass State	$10,850.00
+
+Nurse UR Temp
+Resident Boston Hospital
+Race Caucasian
+SSN 789302345
+Hospital Administrative Nurse
+Salary Base	$65,000.00
+COLA (15%)	$9,750.00
+Bonus		$13,000.00
+Total		$87,750.00
+Estimated Taxes
+Federal		$21,937.50
+Mass State	$4,387.50
+
+Dr. DVM Jordan
+Resident Boston Hospital
+Race Caucasian
+SSN 786456712
+Patient Count 120
+Salary Base	$155,000.00
+COLA (15%)	$23,250.00
+Patient Adj	$46,500.00
+Total		$224,750.00
+Estimated Taxes
+Federal		$56,187.50
+Mass State	$11,237.50
+
+Admin IM Boss
+Resident Boston Hospital
+Race Hispanic
+SSN 543126787
+Senior Executive
+Salary Base	$400,000.00
+COLA (15%)	$60,000.00
+Bonus		$80,000.00
+Total		$540,000.00
+Estimated Taxes
+Federal		$135,000.00
+Mass State	$135,000.00
+
+---------------------------------------------
+WLFU Manager is sorting by Base Salary now...
+---------------------------------------------
+Admin IM Boss
+Resident Boston Hospital
+Race Hispanic
+SSN 543126787
+Senior Executive
+Salary Base	$400,000.00
+COLA (15%)	$60,000.00
+Bonus		$80,000.00
+Total		$540,000.00
+Estimated Taxes
+Federal		$135,000.00
+Mass State	$135,000.00
+
+Nurse UR Temp
+Resident Boston Hospital
+Race Caucasian
+SSN 789302345
+Hospital Administrative Nurse
+Salary Base	$65,000.00
+COLA (15%)	$9,750.00
+Bonus		$13,000.00
+Total		$87,750.00
+Estimated Taxes
+Federal		$21,937.50
+Mass State	$4,387.50
+
+Dr. DVM Jordan
+Resident Boston Hospital
+Race Caucasian
+SSN 786456712
+Patient Count 120
+Salary Base	$155,000.00
+COLA (15%)	$23,250.00
+Patient Adj	$46,500.00
+Total		$224,750.00
+Estimated Taxes
+Federal		$56,187.50
+Mass State	$11,237.50
+
+Dr. IM Bones
+Resident Boston Hospital
+Race African American
+SSN 455657890
+Patient Count 100
+Salary Base	$155,000.00
+COLA (15%)	$23,250.00
+Patient Adj	$38,750.00
+Total		$217,000.00
+Estimated Taxes
+Federal		$54,250.00
+Mass State	$10,850.00
+
+17.81
+12.91
+5.45
+2.34
+1.23

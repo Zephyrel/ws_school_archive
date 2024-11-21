@@ -1,0 +1,2 @@
+This file has an unfinished comment at EOF
+if (x < y) /* open

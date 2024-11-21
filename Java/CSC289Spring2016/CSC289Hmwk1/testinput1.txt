@@ -1,0 +1,18 @@
+/* single-line comment */
+void func1(int x, int y)
+{
+   /* inside a function */
+
+
+   if (x >= y && x<=y)
+                   
+      x = y + 2-12*4 / x;
+   else/**/y = x[0];
+   /* multi-line comment
+
+        
+     end of comment */
+/* case insensitive for keywords*/
+While		TabsPrecede
+return While+12345;
+} /* end-of-file coming next */

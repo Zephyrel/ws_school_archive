@@ -1,0 +1,9 @@
+1.1.1.1
+192.168.1.100
+255.255.255.0
+47.35.123.789
+asdfasdfasdf
+russellstovers@hotmail.com
+bigbangtheory@gmail.com
+rockout@autobots.org
+its@l.it

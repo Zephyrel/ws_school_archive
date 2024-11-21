@@ -1,0 +1,35 @@
+**********Statistics for 100 years of Growing Trees**********
+Total Trees Harvested over period: 999992
+Average One Year Olds Grown:	23718.23
+Average Two Year Olds Grown:	15810.01
+Average Three Year Olds Grown:	13561.66
+Average Four Year Olds Grown:	9999.92
+Aged 1 Variance:	5.513596010896753E10	Std. Dev:	234810.477
+Aged 2 Variance:	2.44982283517718E10	Std. Dev:	156519.099
+Aged 3 Variance:	1.802586413786836E10	Std. Dev:	134260.434
+Aged 4 Variance:	9.800843184627264E9	Std. Dev:	98999.208
+Count:	100
+Next Simulation with New Policy: 3 Year Old Trees immune to beetles.
+**********Statistics for 100 years of Growing Trees**********
+Total Trees Harvested over period: 1999987
+Average One Year Olds Grown:	9122.47
+Average Two Year Olds Grown:	10777.06
+Average Three Year Olds Grown:	10709.56
+Average Four Year Olds Grown:	9999.95
+Aged 1 Variance:	8.15633916687721E9	Std. Dev:	90312.45300000001
+Aged 2 Variance:	1.1383373630095234E10	Std. Dev:	106692.89399999999
+Aged 3 Variance:	1.1241225135326736E10	Std. Dev:	106024.644
+Aged 4 Variance:	9.800901990245026E9	Std. Dev:	98999.505
+Count:	100
+Next Simulation with New Policy: 3 and 4 Year Old Trees 50% immune to beetles.
+**********Statistics for 100 years of Growing Trees**********
+Total Trees Harvested over period: 2999980
+Average One Year Olds Grown:	9534.08
+Average Two Year Olds Grown:	11338.35
+Average Three Year Olds Grown:	9962.41
+Average Four Year Olds Grown:	9999.93
+Aged 1 Variance:	8.908979768561665E9	Std. Dev:	94387.392
+Aged 2 Variance:	1.2599987292612225E10	Std. Dev:	112249.665
+Aged 3 Variance:	9.727454570923882E9	Std. Dev:	98627.859
+Aged 4 Variance:	9.800862786480247E9	Std. Dev:	98999.30699999999
+Count:	100

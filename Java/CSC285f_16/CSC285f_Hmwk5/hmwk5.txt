@@ -1,0 +1,19 @@
+This assignment is due on October 19.  We will have an exam on October 20.  I will return this assignment for the exam on the 20th.
+
+Create class School which implements the Comparable<School> interface.  Each school consists of the school name, the city, and the state.  Have at least one constructor and all the needed setters and getters.  Implement equals(), hash() (use the IDE to generate them), toString(), and compareTo().  CompareTo should use the institution name, state, and city in that order.
+
+Read from the misc.post database on REDACTED.  Read a state abbreviation from the command line (args[0]) and print out an ordered list of schools in that state.  If no state is given use WY.
+
+Your OrderedLinkedList class should have the following methods:
+
+    Constructor
+    toString
+    isEmpty
+    addFirst(E item)
+    addInOrder(E item)
+    toString   -- returns the entire list as a string, probably with \n characters between records
+    E findInOrder(E target) -- returns the element E that holds the target and null if not found
+    E first()  -- returns the first item, or null if the list is empty
+    E last() -- returns the last item, or null if the list is empty
+
+Use findInOrder to print out the institution name listed in args[1].

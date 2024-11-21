@@ -1,0 +1,59 @@
+--------------------------------------------------------------------------------------------------------------
+Student ID	Student Name 	Test 1	Test 2	Test 3	Total Hr	GPA 	Test Avg. 	Student Class
+--------------------------------------------------------------------------------------------------------------
+88I9 		Garner J     	95	92	98	110		3.89	95.00 		SR
+44L2 		Levitte H     	56	66	99	100		2.35	73.67 		SR
+78T6 		Johnson K     	80	78	89	15		2.00	82.33 		FR
+42P4 		Hinrichs S     	85	75	65	52		3.29	75.00 		SO
+34U8 		Hunter C     	100	50	75	75		2.60	75.00 		JR
+56J8 		Gach, T A     	75	85	90	60		3.75	83.33 		SO
+34K5 		Horner, M     	67	75	23	17		1.95	55.00 		FR
+45A3 		Jones, H A     	86	88	95	98		3.42	89.67 		SR
+
+Student with Student ID 42P4 has been deleted off the records.
+
+Student with Student ID 45A3 has been deleted off the records.
+
+--------------------------------------------------------------------------------------------------------------
+Student ID	Student Name 	Test 1	Test 2	Test 3	Total Hr	GPA 	Test Avg. 	Student Class
+--------------------------------------------------------------------------------------------------------------
+88I9 		Garner J     	95	92	98	110		3.89	95.00 		SR
+44L2 		Levitte H     	56	66	99	100		2.35	73.67 		SR
+78T6 		Johnson K     	80	78	89	15		2.00	82.33 		FR
+34U8 		Hunter C     	100	50	75	75		2.60	75.00 		JR
+56J8 		Gach, T A     	75	85	90	60		3.75	83.33 		SO
+34K5 		Horner, M     	67	75	23	17		1.95	55.00 		FR
+
+Student with the following information has been added: 
+67T4 		Clouse B       	80	75	98	102		3.65	84.33 		SR
+
+Student with the following information has been added: 
+45P5 		Garrison J     	75	78	72	39		1.85	75.00 		SO
+
+Student with the following information has been added: 
+89P0 		Singer A       	85	95	99	130		3.87	93.00 		SR
+
+--------------------------------------------------------------------------------------------------------------
+Student ID	Student Name 	Test 1	Test 2	Test 3	Total Hr	GPA 	Test Avg. 	Student Class
+--------------------------------------------------------------------------------------------------------------
+88I9 		Garner J     	95	92	98	110		3.89	95.00 		SR
+89P0 		Singer A       	85	95	99	130		3.87	93.00 		SR
+67T4 		Clouse B       	80	75	98	102		3.65	84.33 		SR
+56J8 		Gach, T A     	75	85	90	60		3.75	83.33 		SO
+78T6 		Johnson K     	80	78	89	15		2.00	82.33 		FR
+45P5 		Garrison J     	75	78	72	39		1.85	75.00 		SO
+34U8 		Hunter C     	100	50	75	75		2.60	75.00 		JR
+44L2 		Levitte H     	56	66	99	100		2.35	73.67 		SR
+34K5 		Horner, M     	67	75	23	17		1.95	55.00 		FR
+
+
+Printing a sorted list of doubles
+51.2
+15.6
+12.4
+11.2
+8.9
+2.3
+1.5
+0.9
+-3.5

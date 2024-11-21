@@ -1,0 +1,31 @@
+public static void main(String[] args)throws Exception{
+	
+	PrintWriter outpt;
+	
+	outpt=new PrintWriter(new File("Java.")
+	
+	}
+}
+
+class BinaryTreeMgr<T extends Comparable>{
+
+	protected TreeNode<T> root;
+	protected int number;
+	public BinaryTreeMgr(){
+		root=null;
+		int number=0;
+	}
+	public int getNumber(){return number;}
+	private static TreeNode<T extends Comparable>{
+		protected T data;
+		ptotected TreeNode<T> left;
+		protected TreeNode<T> right;
+		public TreeNode(T t){data=t;left=null;right=null;}
+		protected TreeNode<T> CreateNode(T t){return new TreeNode(t);}
+		public int insertNode(T t){
+		if(root==null){
+			root=CreateNode(t);
+			number=
+		}
+	}
+	
